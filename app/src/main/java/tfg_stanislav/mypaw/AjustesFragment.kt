@@ -13,10 +13,10 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [Cuenta.newInstance] factory method to
+ * Use the [AjustesFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class Cuenta : Fragment() {
+class AjustesFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -34,7 +34,7 @@ class Cuenta : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_cuenta, container, false)
+        return inflater.inflate(R.layout.fragment_ajustes, container, false)
     }
 
     companion object {
@@ -44,12 +44,12 @@ class Cuenta : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment Cuenta.
+         * @return A new instance of fragment Ajustes.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            Cuenta().apply {
+            AjustesFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

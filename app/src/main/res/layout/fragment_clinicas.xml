@@ -3,14 +3,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Clinicas">
+    tools:context=".ClinicasFragment"
+    android:id="@+id/frameLayout">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewClinicas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Clínicas"
-        android:textSize="26dp"
-        android:layout_gravity="center"/>
-
+        android:textAlignment="center"
+        tools:listitem="@layout/each_clinic"
+        tools:layout_conversion_absoluteHeight="659dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_conversion_absoluteWidth="411dp" />
 </FrameLayout>
