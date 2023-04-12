@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "740394607998",
+    "project_id": "my-paw-e50c6",
+    "storage_bucket": "my-paw-e50c6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:740394607998:android:7385e282c3683504bb7f2f",
+        "android_client_info": {
+          "package_name": "tfg_stanislav.mypaw"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "740394607998-dk4l2u2naqrvp71usebgnlqp8769k94p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGGKrpva8ThhU7taRINoHmqD3kRmx-eek"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "740394607998-dk4l2u2naqrvp71usebgnlqp8769k94p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
