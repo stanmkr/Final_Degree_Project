@@ -3,6 +3,9 @@
     <item android:title="Inicio"
         android:id="@+id/home"
         android:icon="@drawable/baseline_home_24"/>
+    <item android:title="Clínicas"
+        android:id="@+id/clinics"
+        android:icon="@drawable/baseline_clinica_24"/>
     <item android:title="Cuenta"
         android:id="@+id/profile"
         android:icon="@drawable/baseline_person_24"/>

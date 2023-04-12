@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
 
                 R.id.home -> replaceFragment(Inicio())
                 R.id.profile -> replaceFragment(Cuenta())
+                R.id.clinics -> replaceFragment(Clinicas())
                 R.id.settings -> replaceFragment(Ajustes())
 
                 else ->{
