@@ -10,8 +10,11 @@ import androidx.recyclerview.widget.RecyclerView
 class ClinicaAdapter(private val clinicaList: ArrayList<Clinica>) :
     RecyclerView.Adapter<ClinicaAdapter.ClinicaViewHolder>() {
 
+    var onItemClick: ((Clinica) -> Unit)? = null
+
     class ClinicaViewHolder(itemView: View) :
         RecyclerView.ViewHolder(itemView) {
+
         val imageView: ImageView = itemView.findViewById(R.id.clinicaImageView)
         val TextView: TextView = itemView.findViewById(R.id.clinicaTextView)
     }
@@ -29,6 +32,10 @@ class ClinicaAdapter(private val clinicaList: ArrayList<Clinica>) :
         val clinica = clinicaList[position]
         holder.imageView.setImageResource(clinica.image)
         holder.TextView.text = clinica.name
+
+        holder.itemView.setOnClickListener {
+            onItemClick?.invoke(clinica)
+        }
 
     }
 

@@ -1,5 +1,6 @@
 package tfg_stanislav.mypaw
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -84,6 +85,12 @@ class ClinicasFragment : Fragment() {
         recyclerView.setHasFixedSize(true)
         clinicaAdapter = ClinicaAdapter(listaClinicas)
         recyclerView.adapter = clinicaAdapter
+
+        clinicaAdapter.onItemClick = {
+            val intent = Intent(context, ClinicaDetallesActivity::class.java)
+            intent.putExtra("clinica",it)
+            startActivity(intent)
+        }
     }
 
     private fun dataInit() {
@@ -122,6 +129,7 @@ class ClinicasFragment : Fragment() {
             listaClinicas.add(detallesClinica)
 
         }
+
 
     }
 
