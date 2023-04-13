@@ -33,6 +33,7 @@ class ClinicaAdapter(private val clinicaList: ArrayList<Clinica>) :
         holder.imageView.setImageResource(clinica.image)
         holder.TextView.text = clinica.name
 
+
         holder.itemView.setOnClickListener {
             onItemClick?.invoke(clinica)
         }

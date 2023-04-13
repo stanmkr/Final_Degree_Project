@@ -18,9 +18,18 @@ private const val ARG_PARAM2 = "param2"
 private lateinit var recyclerView: RecyclerView
 private lateinit var listaClinicas: ArrayList<Clinica>
 private lateinit var clinicaAdapter: ClinicaAdapter
-lateinit var imageId : Array<Int>
-lateinit var titulo : Array<String>
-lateinit var detallesClinica : Array<String>
+lateinit var imageId: Array<Int>
+lateinit var imageTlf: Array<Int>
+lateinit var imageEmail: Array<Int>
+lateinit var imageDireccion: Array<Int>
+lateinit var imageHorario: Array<Int>
+lateinit var titulo: Array<String>
+lateinit var telefono: Array<String>
+lateinit var email: Array<String>
+lateinit var direccion: Array<String>
+lateinit var horario: Array<String>
+
+//lateinit var detallesClinica: Array<String>
 
 /**
  * A simple [Fragment] subclass.
@@ -31,8 +40,6 @@ class ClinicasFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
-
-
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -88,7 +95,7 @@ class ClinicasFragment : Fragment() {
 
         clinicaAdapter.onItemClick = {
             val intent = Intent(context, ClinicaDetallesActivity::class.java)
-            intent.putExtra("clinica",it)
+            intent.putExtra("clinica", it)
             startActivity(intent)
         }
     }
@@ -102,7 +109,7 @@ class ClinicasFragment : Fragment() {
             R.drawable.clinica,
             R.drawable.clinica,
             R.drawable.clinica,
-            R.drawable.clinica,
+            R.drawable.clinica
         )
         titulo = arrayOf(
             "Clinica Torrevieja",
@@ -110,22 +117,92 @@ class ClinicasFragment : Fragment() {
             "Clinica Alicante",
             "Clinica Elche",
             "Clinica Valencia",
-            "Clinica Murcia",
+            "Clinica Murcia"
+        )
+        imageTlf = arrayOf(
+            R.drawable.baseline_local_phone_24,
+            R.drawable.baseline_local_phone_24,
+            R.drawable.baseline_local_phone_24,
+            R.drawable.baseline_local_phone_24,
+            R.drawable.baseline_local_phone_24,
+            R.drawable.baseline_local_phone_24
+        )
+        imageEmail = arrayOf(
+            R.drawable.baseline_email_24,
+            R.drawable.baseline_email_24,
+            R.drawable.baseline_email_24,
+            R.drawable.baseline_email_24,
+            R.drawable.baseline_email_24,
+            R.drawable.baseline_email_24
         )
 
-        detallesClinica = arrayOf(
-            "Detalles de la clinica de Torrevieja",
-            "Detalles de la clinica de Orihuela Costa",
-            "Detalles de la clinica de Alicante",
-            "Detalles de la clinica de Elche",
-            "Detalles de la clinica de Valencia",
-            "Detalles de la clinica de Murcia",
-
-
+        imageDireccion = arrayOf(
+            R.drawable.baseline_address_24,
+            R.drawable.baseline_address_24,
+            R.drawable.baseline_address_24,
+            R.drawable.baseline_address_24,
+            R.drawable.baseline_address_24,
+            R.drawable.baseline_address_24
         )
+
+        imageHorario = arrayOf(
+            R.drawable.baseline_clock_24,
+            R.drawable.baseline_clock_24,
+            R.drawable.baseline_clock_24,
+            R.drawable.baseline_clock_24,
+            R.drawable.baseline_clock_24,
+            R.drawable.baseline_clock_24
+        )
+
+        telefono = arrayOf(
+            "666 777 888",
+            "333 777 888",
+            "444 777 888",
+            "111 777 888",
+            "555 777 888",
+            "222 777 888"
+        )
+        email = arrayOf(
+            "torrevieja@mypaw.es",
+            "orihuelacosta@mypaw.es",
+            "alicante@mypaw.es",
+            "elche@mypaw.es",
+            "valencia@mypaw.es",
+            "murcia@mypaw.es",
+        )
+
+        direccion = arrayOf(
+            "c/ Apolo 3, Torrevieja 03184",
+            "c/ Marte 98, Orihuela Costa 03189",
+            "c/ Luna 33, Alicante 03010",
+            "c/ Bazan 4, Elche 03201",
+            "c/ La Sal 77, Valencia 46001",
+            "c/ Sol 12, Murcia 30001"
+        )
+
+        horario = arrayOf(
+            "L-V 9 a 20:30\nSábado 9 a 14:00",
+            "L-V 9 a 20:30\nSábado 9 a 14:00",
+            "L-V 9 a 20:30\nSábado 9 a 14:00",
+            "L-V 9 a 20:30\nSábado 9 a 14:00",
+            "L-V 9 a 20:30\nSábado 9 a 14:00",
+            "L-V 9 a 20:30\nSábado 9 a 14:00",
+        )
+
+
+
+//        detallesClinica = arrayOf(
+//            "Detalles de la clinica de Torrevieja",
+//            "Detalles de la clinica de Orihuela Costa",
+//            "Detalles de la clinica de Alicante",
+//            "Detalles de la clinica de Elche",
+//            "Detalles de la clinica de Valencia",
+//            "Detalles de la clinica de Murcia"
+//            )
 
         for (i in imageId.indices) {
-            val detallesClinica = Clinica(imageId[i], titulo[i])
+            val detallesClinica = Clinica(imageId[i], titulo[i], imageTlf[i], telefono[i],imageEmail[i], email[i],
+                imageDireccion[i], direccion[i], imageHorario[i], horario[i])
             listaClinicas.add(detallesClinica)
 
         }
