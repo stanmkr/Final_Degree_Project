@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginLeft="0dp"
+    android:key="root_preferences"
+    android:title="AJUSTES">
+
+    <PreferenceCategory
+        android:title="AJUSTES DE CUENTA"
+        android:key="notifications_category">
+
+
+
+        <Preference
+            android:defaultValue="true"
+            android:icon="@drawable/baseline_person_24"
+            android:key="notifications_enabled"
+            android:showAsAction="never"
+            android:summary="Ver y editar perfil"
+            android:title="Cuenta"
+            />
+        <Preference
+            android:defaultValue="content://settings/system/notification_sound"
+            android:dialogTitle="array"
+            android:icon="@drawable/baseline_logout_24"
+            android:key="notification_ringtone"
+
+            android:showAsAction="never"
+            android:summary="Cierra sesión de My Paw"
+            android:title="Cerrar sesión" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="AJUSTES DE NOTIFICACIONES"
+        android:key="notifications_category">
+
+        <SwitchPreferenceCompat
+            android:defaultValue="true"
+            android:icon="@drawable/baseline_notifications_active_24"
+            android:key="notifications_enabled"
+            android:showAsAction="never"
+            android:summary="Activa o desactiva las notificaciones"
+            android:title="Habilitar notificaciones"
+            />
+        <ListPreference
+            android:defaultValue="content://settings/system/notification_sound"
+            android:dialogTitle="array"
+            android:icon="@drawable/baseline_more_horiz_24"
+            android:key="notification_ringtone"
+
+            android:showAsAction="never"
+            android:summary="Todas las notificiones"
+            android:title="Ajustes de notificaciones" />
+        <SwitchPreferenceCompat
+            android:defaultValue="false"
+            android:icon="@drawable/baseline_vibration_24"
+            android:key="vibrate_on_notification"
+            android:showAsAction="never"
+            android:summary="Activa o desactiva la vibración de las notificaciones"
+            android:title="Habilitar vibración" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="AJUSTES DE PRIVACIDAD"
+        android:key="notifications_category">
+
+        <Preference
+            android:defaultValue="true"
+            android:icon="@drawable/baseline_privacy_tip_24"
+            android:key="notifications_enabled"
+            android:showAsAction="never"
+            android:summary="Ajustes de privacidad"
+            android:title="Privacidad"
+            />
+        <Preference
+            android:defaultValue="true"
+            android:icon="@drawable/baseline_security_24"
+            android:key="notifications_enabled"
+            android:showAsAction="never"
+            android:summary="Ajustes de seguridad"
+            android:title="Seguridad"
+            />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="AJUSTES DE APARIENCIA"
+        android:key="notifications_category">
+
+        <SwitchPreferenceCompat
+            android:defaultValue="false"
+            android:icon="@drawable/baseline_dark_mode_24"
+            android:key="notifications_enabled"
+            android:showAsAction="never"
+            android:summary="Habilitar o desactivar el modo oscuro"
+            android:title="Modo oscuro"
+            />
+        <Preference
+            android:defaultValue="content://settings/system/notification_sound"
+            android:dialogTitle="array"
+            android:icon="@drawable/baseline_more_horiz_24"
+            android:key="notification_ringtone"
+
+            android:showAsAction="never"
+            android:summary="Ajustes de apariencia"
+            android:title="Apariencia" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="AYUDA Y SOPORTE"
+        android:key="notifications_category">
+
+        <Preference
+            android:defaultValue="false"
+            android:icon="@drawable/baseline_headset_mic_24"
+            android:key="notifications_enabled"
+            android:showAsAction="never"
+            android:summary="Crea ticket de incidencia"
+            android:title="Soporte"
+            />
+
+
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="SOBRE MY PAW"
+        android:key="notifications_category">
+
+        <Preference
+            android:defaultValue="false"
+            android:icon="@drawable/baseline_version_24"
+            android:key="notifications_enabled"
+            android:showAsAction="never"
+            android:summary="Beta 1.0"
+            android:title="Versión"
+            />
+
+        <Preference
+            android:defaultValue="false"
+            android:icon="@drawable/baseline_android_24"
+            android:key="notifications_enabled"
+            android:showAsAction="never"
+            android:summary="7.0 Nougat"
+            android:title="Versión mínima de Android"
+            />
+        <Preference
+            android:defaultValue="false"
+            android:icon="@drawable/baseline_settings_24"
+            android:key="notifications_enabled"
+            android:showAsAction="never"
+            android:summary="24"
+            android:title="Versión mínima de SDK"
+            />
+        <Preference
+            android:defaultValue="false"
+            android:icon="@drawable/baseline_code_24"
+            android:key="notifications_enabled"
+            android:showAsAction="never"
+            android:summary="Stanislav Miroslavov Krastev"
+            android:title="Autor"
+            />
+
+
+    </PreferenceCategory>
+</PreferenceScreen>
