@@ -3,7 +3,6 @@ package tfg_stanislav.mypaw
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import tfg_stanislav.mypaw.databinding.ActivityMainBinding
 
@@ -29,7 +28,7 @@ class MainActivity : AppCompatActivity() {
             when(it.itemId){
 
                 R.id.home -> replaceFragment(InicioFragment())
-                R.id.profile -> replaceFragment(CuentaFragment())
+                R.id.pets -> replaceFragment(MascotasFragment())
                 R.id.clinics -> replaceFragment(ClinicasFragment())
                 R.id.settings -> replaceFragment(AjustesFragment())
 
