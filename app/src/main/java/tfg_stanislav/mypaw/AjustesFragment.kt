@@ -1,18 +1,24 @@
 package tfg_stanislav.mypaw
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AlertDialog
+import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.auth.FirebaseAuth
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
+val mAuth: FirebaseAuth = FirebaseAuth.getInstance()
+
 
 /**
  * A simple [Fragment] subclass.
@@ -44,6 +50,27 @@ class AjustesFragment : PreferenceFragmentCompat() {
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.root_preferences, rootKey)
+        val logoutPreference = findPreference<Preference>("logout_preference")
+        logoutPreference?.setOnPreferenceClickListener {
+            val builder = AlertDialog.Builder(requireContext())
+            builder.setMessage("¿Estás seguro que quieres cerrar sesión?")
+            builder.setPositiveButton("Sí") { dialog, which ->
+                // El usuario hizo clic en el botón "Sí", cierra la sesión
+                mAuth.signOut()
+                val intent = Intent(context, SignInActivity::class.java)
+                startActivity(intent)
+                activity?.finish()
+            }
+            builder.setNegativeButton("No") { dialog, which ->
+                // El usuario hizo clic en el botón "No", cierra el diálogo
+                dialog.dismiss()
+            }
+            // Muestra el diálogo de confirmación
+            builder.show()
+            true
+
+        }
+
     }
 
     companion object {
