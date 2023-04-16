@@ -88,7 +88,7 @@
 
         <SwitchPreferenceCompat
             android:defaultValue="false"
-            android:icon="@drawable/baseline_vibration_24"
+            android:icon="@drawable/baseline_dark_mode_24"
             android:key="vibrate_on_notification"
             android:showAsAction="never"
             android:summary="Habilitar o desactivar el modo oscuro"
@@ -115,6 +115,14 @@
             android:summary="Crea ticket de incidencia"
             android:title="Soporte"
             />
+        <Preference
+        android:defaultValue="false"
+        android:icon="@drawable/baseline_star_24"
+        android:key="notifications_enabled"
+        android:showAsAction="never"
+        android:summary="Déjanos una reseña y dinos en qué podemos mejorar"
+        android:title="Valora My Paw"
+        />
 
 
     </PreferenceCategory>
