@@ -26,5 +26,12 @@
     <string name="attachment_summary_on" translatable="false">Automatically download attachments for incoming emails
     </string>
     <string name="attachment_summary_off" translatable="false">Only download attachments when manually requested</string>
-
+    <string-array name="historial_entries">
+        <item>Selecciona historial</item>
+        <item>Historial de vacunas</item>
+        <item>Historial de análisis</item>
+        <item>Historial de procedimientos</item>
+        <item>Historial de consultas</item>
+        <item>Historial de peso</item>
+    </string-array>
 </resources>

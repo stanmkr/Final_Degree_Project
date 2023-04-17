@@ -12,6 +12,12 @@
         android:theme="@style/Theme.MyPaw"
         tools:targetApi="31">
 
+        <activity android:name=".VacunasActivity" />
+        <activity android:name=".PesoActivity" />
+        <activity android:name=".ConsultasActivity" />
+        <activity android:name=".ProcedimientosActivity" />
+        <activity android:name=".AnalisisActivity" />
+
         <activity
             android:name=".ClinicaDetallesActivity"
             android:exported="false" />

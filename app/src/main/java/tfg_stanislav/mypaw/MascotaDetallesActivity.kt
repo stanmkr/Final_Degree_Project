@@ -1,7 +1,12 @@
 package tfg_stanislav.mypaw
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
 import android.widget.ImageView
+import android.widget.Spinner
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
@@ -11,7 +16,34 @@ class MascotaDetallesActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mascota_detalles)
+        val spinner = findViewById<Spinner>(R.id.historial_spinner)
+        spinner.setSelection(0) // Establecer el elemento predeterminado
 
+        spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+
+
+            override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
+                val selectedItem = parent.getItemAtPosition(position).toString()
+                if (selectedItem == "Historial de vacunas") {
+                    val intent = Intent(this@MascotaDetallesActivity, VacunasActivity::class.java)
+                    startActivity(intent)
+                }else if (selectedItem == "Historial de análisis") {
+                    val intent = Intent(this@MascotaDetallesActivity, AnalisisActivity::class.java)
+                    startActivity(intent)
+                }else if (selectedItem == "Historial de procedimientos") {
+                    val intent = Intent(this@MascotaDetallesActivity, ProcedimientosActivity::class.java)
+                    startActivity(intent)
+                }else if (selectedItem == "Historial de consultas") {
+                    val intent = Intent(this@MascotaDetallesActivity, ConsultasActivity::class.java)
+                    startActivity(intent)
+                }else if (selectedItem == "Historial de peso") {
+                    val intent = Intent(this@MascotaDetallesActivity, PesoActivity::class.java)
+                    startActivity(intent)
+                }
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>) {}
+        }
         val mascota = intent.getParcelableExtra<Mascota>("mascota")
         if(mascota != null) {
             val textView : TextView = findViewById(R.id.mascotaDetallesActivityTextView)
@@ -40,6 +72,9 @@ class MascotaDetallesActivity: AppCompatActivity() {
             iconoPeso.setImageResource(mascota.imagePeso)
             peso.text = mascota.peso
 
+
         }
     }
+
+
 }
