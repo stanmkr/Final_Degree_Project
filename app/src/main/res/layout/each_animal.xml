@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
-
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -13,7 +10,6 @@
     android:layout_marginHorizontal="20dp"
     android:layout_marginVertical="20dp"
     android:outlineSpotShadowColor="@color/azul_Principal"
-
     app:cardElevation="20dp">
 
 
@@ -22,31 +18,34 @@
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/clinicaImageView"
+            android:id="@+id/mascotaImageView"
             android:layout_width="130dp"
             android:layout_height="120dp"
-            android:padding="5dp"
+            android:padding="10dp"
             android:scaleType="fitXY"
             android:src="@drawable/perro1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints" />
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp" />
 
         <TextView
-            android:id="@+id/clinicaTextView"
+            android:id="@+id/mascotaTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed"
-            android:text="Clínica Torrevieja"
+            android:text="Odín"
+            android:textAllCaps="true"
+            android:letterSpacing="0.2"
             android:textColor="@color/azul_Principal"
-            android:textSize="25sp"
+            android:textSize="27sp"
             android:textStyle="bold"
             app:flow_horizontalAlign="start"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.184"
-            app:layout_constraintStart_toEndOf="@+id/clinicaImageView"
+            app:layout_constraintHorizontal_bias="0.405"
+            app:layout_constraintStart_toEndOf="@+id/mascotaImageView"
             app:layout_constraintTop_toTopOf="parent" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

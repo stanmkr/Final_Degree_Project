@@ -5,12 +5,16 @@
     android:layout_height="match_parent"
     tools:context=".MascotasFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="wrap_content"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewMascotas"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Mascotas"
-        android:textSize="26sp" />
+        android:textAlignment="center"
+        tools:layout_conversion_absoluteHeight="659dp"
+        tools:layout_conversion_absoluteWidth="411dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:listitem="@layout/each_animal" />
+
 
 </FrameLayout>

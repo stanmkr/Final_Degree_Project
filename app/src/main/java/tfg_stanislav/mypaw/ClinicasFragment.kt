@@ -112,12 +112,12 @@ class ClinicasFragment : Fragment() {
             R.drawable.clinica
         )
         titulo = arrayOf(
-            "Clinica Torrevieja",
-            "Clinica Orihuela Costa",
-            "Clinica Alicante",
-            "Clinica Elche",
-            "Clinica Valencia",
-            "Clinica Murcia"
+            "Clínica Torrevieja",
+            "Clínica Orihuela Costa",
+            "Clínica Alicante",
+            "Clínica Elche",
+            "Clínica Valencia",
+            "Clínica Murcia"
         )
         imageTlf = arrayOf(
             R.drawable.baseline_local_phone_24,
